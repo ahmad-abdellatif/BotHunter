@@ -9,6 +9,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from datetime import datetime
 from datetime import timedelta
 import argparse
+import os
 
 from warnings import simplefilter
 # ignore all future warnings
@@ -74,8 +75,10 @@ def cli():
     login_names = []
     prediction = {}
 
+    __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+
     ## Load the model
-    rf = joblib.load("./random_forest.joblib")
+    rf = joblib.load(os.path.join(__location__, 'random_forest.joblib'))
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--key", action='store', type=str, required= True, help="GitHub Token")
