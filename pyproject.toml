@@ -1,0 +1,14 @@
+[project]
+name = "BotHunter"
+version = "0.0.1"
+dependencies = [
+    "joblib",
+    "numpy",
+    "pandas",
+    "PyGithub",
+    "datetime",
+    "scikit-learn",
+    "statistics"
+]
+[project.scripts]
+bothunter = "bothunter"
