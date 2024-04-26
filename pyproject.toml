@@ -11,4 +11,4 @@ dependencies = [
     "statistics"
 ]
 [project.scripts]
-bothunter = "bothunter"
+bothunter = "BotHunter:cli"
