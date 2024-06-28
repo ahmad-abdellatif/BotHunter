@@ -91,7 +91,7 @@ def cli():
 
 
 
-    gh = Github(args.key)
+    gh = Github(args.key, per_page=100)
     df = pd.DataFrame(columns=columns)
 
     if args.u != None:
